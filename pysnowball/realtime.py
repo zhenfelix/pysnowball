@@ -17,6 +17,6 @@ def pankou(symbol):
     url = api_ref.realtime_pankou+symbol
     return utls.fetch(url)
 
-
+#type_='before'/'after'/'normal'
 def kline(symbol, days=100):
     return utls.fetch(api_ref.kline.format(symbol, int(time.time()*1000), days))
